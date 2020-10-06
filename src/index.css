@@ -21,16 +21,64 @@ code {
   /* padding-top: 3vh; */
 }
 
-.App-header {
+.App-header-container {
   /* background-color: #282c34; */
   /* min-height: 1vh; */
   /* height: 10vh; */
-  /* display: flex; */
+  display: flex;
   /* flex-direction: column; */
   /* align-items: center; */
   /* justify-content: center; */
   /* font-size: calc(10px + 2vmin); */
+  background-color: rgb(45, 70, 70);
+  width: 100%;
+  justify-content: center;
+  /* align-items: center; */
   color: white;
+}
+
+
+.app-header-guide{
+  /* background-color: chocolate; */
+  display: flex;
+  /* font-size: 250; */
+  /* align-items: left; */
+}
+
+.search-area{
+  /* background-color: rgb(27, 56, 56); */
+  padding-top: 1.5vh;
+  margin-left: 35vh;
+}
+
+.app-header{
+  padding-right: 1vh;
+  font-size: 20px;
+  /* background-color: blueviolet; */
+  width: fit-content;
+  /* margin-left: 5vh; */
+  /* padding-right: 7vh; */
+  cursor: pointer;
+}
+
+.app-header:hover{
+  color: #f4511e;
+}
+
+.header-search{
+  background-color: #282c34;
+  margin-top:0;
+  /* margin-bottom: 5vh; */
+  /* padding-bottom: 3vh; */
+}
+
+.upcoming-anime, .airing-anime{
+  margin:4vh;
+}
+
+.topAnimes{
+  padding: 1.5vh;
+  background-color: white;
 }
 
 input{
@@ -50,9 +98,16 @@ input{
   box-shadow:0 0 15px 2px rgb(37, 34, 34);
 }
 
+/* .search-area{
+  padding-top: 3vh;
+} */
+
 .anime-list {
-  background-color: #b0b8c7;
+  /* background-color: #b0b8c7; */
   width: fit-content;
+  padding-top: 3vh;
+  padding-bottom: 3vh;
+  margin:4vh;
   /* display: -webkit-box;
   display: -ms-flexbox;
   display: inline;
@@ -79,18 +134,15 @@ input{
   display: inline-block;
   margin: 5px auto;
   background:  #282c34;
-  border: 5px solid  #282c34;
-  border-radius: 3px;
+  /* border: 5px solid  #282c34; */
+  /* border-radius: 3px; */
   box-shadow: 0 0 10px  #282c34;
-
-
   /* position: relative;
   box-shadow:0 0 15px 4px rgb(99, 99, 99);
   height: 50%;
   max-width: 315px;
   margin: 2em;
   display: inline-block; */
-
 }
 
 .anime-card .front,.back{
@@ -117,15 +169,94 @@ input{
   /* transform: rotateY(-180deg); */
 }
 
+
 .anime-card .back .title{
   /* font-size: 15px; */
+  /* position: absolute;
+  top: 200px; */
+  /* bottom: 200px; */
   margin-top: 0;
   margin-bottom: 8px;
   color: rgb(255, 255, 255);
   background-color: rgb(242, 247, 242, 0.2);
   text-align: center;
+  font-size: 300;
   font-weight: 500;
+  cursor: pointer;
 }
+
+.anime-card .back .title:hover{
+  /* font-size: */
+  background-color: rgba(103, 110, 103, 0.2);
+}
+
+.title span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.title span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.title:hover span {
+  padding-right: 4px;
+}
+
+.title:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+
+.recommendationBtn{
+  display: inline-block;
+  border-radius: 4px;
+  background-color: #f4511e;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 15px;
+  padding: 3px;
+  width: 100%;
+  transition: all 0.5s;
+  cursor: pointer;
+  /* margin: 1px; */
+  margin-bottom: 1vh;
+}
+
+.recommendationBtn span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.recommendationBtn span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.recommendationBtn:hover span {
+  padding-right: 25px;
+}
+
+.recommendationBtn:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
 
 .anime-card .back h3, h5, h6{
   text-align: left;
@@ -136,9 +267,6 @@ input{
   margin-bottom: 8px;
 }
 
-.anime-card:hover{
-  cursor: pointer;
-}
 
 .anime-card:hover .front{
   transform: rotateY(180deg);
